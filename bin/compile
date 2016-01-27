@@ -270,6 +270,9 @@ fi
 # shellcheck source=bin/steps/eggpath-fix
 source "$BIN_DIR/steps/eggpath-fix"
 
+# Python-ldap support.
+source $BIN_DIR/steps/python-ldap
+
 # SQLite3 support.
 # This sets up and installs sqlite3 dev headers and the sqlite3 binary but not the
 # libsqlite3-0 library since that exists on the stack image.
