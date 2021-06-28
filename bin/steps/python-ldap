@@ -11,8 +11,6 @@
 
 source $BIN_DIR/utils
 
-bpwatch start python_ldap
-
 python-ldap-version() {
     local PYTHON_LDAP_VERSION=""
     if cat requirements.txt | grep python-ldap ; then
@@ -148,4 +146,3 @@ if (pip-grep -s requirements.txt python-ldap django-auth-ldap &> /dev/null) then
     install-python-ldap $OPENLDAP_BUILD_DIR
 fi
 
-bpwatch stop python_ldap
